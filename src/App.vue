@@ -15,6 +15,8 @@
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+
   body {
     margin: 0;
   }

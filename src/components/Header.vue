@@ -48,8 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
-
 .header-container {
   font-family: "Major Mono Display", monospace;
 }
@@ -171,7 +169,7 @@ export default {
   margin-right: -100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 559px) {
   .big-header {
     display: none;
   }
@@ -187,7 +185,7 @@ export default {
   }
 }
 
-@media (min-width: 615px) {
+@media (min-width: 627px) {
   .big-header {
     margin: 0 1.7rem;
   }
