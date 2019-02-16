@@ -1,7 +1,9 @@
 <template lang="pug">
   .header-container
     header.header
-      img.logo(src="@/assets/ant-logo.svg" alt="logo")
+      .logo-container
+        img.logo(src="@/assets/ant-logo-right.svg" alt="logo")
+        img.logo-right(src="@/assets/ant-logo-left.svg" alt="logo")
       nav.big-nav
         ul.nav-list
           li.big-header
@@ -18,16 +20,20 @@
         .hamburger-line
         .hamburger-line
     .pop-menu(:class="{ hide: hide }")
-      p.pop-menu-x(v-on:click="hide = !hide")
-        | X
-      nav
-        ul
-          li.link
-            | Home
-          li.link
-            | About
-          li.link
-            | in the Hill
+      .pop-extra(v-on:click="hide = !hide")
+      .pop-flex-container
+        .pop-header(v-on:click="hide = !hide")
+          img.pop-logo(src="@/assets/ant-logo-left.svg" alt="logo")
+          p.pop-menu-x
+            | X
+        nav(v-on:click="hide = !hide")
+          ul
+            li.link
+              | Home
+            li.link
+              | About
+            li.link
+              | in the Hill
 </template>
 
 <script>
@@ -41,7 +47,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
 
 .header-container {
@@ -51,6 +57,11 @@ export default {
 .logo {
   height: 2.5rem;
   margin: 2rem 0 1.5rem 1rem;
+}
+
+.logo-right {
+  height: 2.5rem;
+  margin: 2rem 0 1.5rem 5px;
 }
 
 .header {
@@ -93,17 +104,28 @@ export default {
   margin: 5px;
 }
 
+.pop-header {
+  display: flex;
+  background-color: #000;
+  width: 100%;
+}
+
+.pop-logo {
+  height: 2.5rem;
+  margin: 2rem 0 1.5rem 3px;
+}
+
 .pop-menu {
   position: fixed;
   right: 0;
-  width: 75%;
+  width: 100%;
   top: 0;
   height: 100%;
-  background-color: #000;
   color: #59E0FF;
   opacity: 0.93;
   z-index: 3;
   transition: 0.4s ease-in-out;
+  display: flex;
 
   .pop-menu-x {
     position: absolute;
@@ -116,7 +138,14 @@ export default {
   }
 
   nav {
-    margin-top: 6.5rem;
+    margin: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+
+    ul {
+      padding-left: 30px;
+    }
 
     li {
       list-style: none;
@@ -126,23 +155,38 @@ export default {
   }
 }
 
+.pop-flex-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-extra {
+  width: 25%;
+  background-color: #00000035;
+}
+
 .hide {
   margin-right: -100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .big-header {
+    display: none;
+  }
+
+  .logo-right {
     display: none;
   }
 }
 
-@media(min-width: 501px) {
+@media(min-width: 551px) {
   .hamburger {
     display: none;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 615px) {
   .big-header {
     margin: 0 1.7rem;
   }
