@@ -13,20 +13,30 @@
           li.big-header
             a(href="#")
               | in the Hill
-      .hamburger
+      .hamburger(v-on:click="hide = !hide")
         .hamburger-line
         .hamburger-line
         .hamburger-line
-    PopOutMenu
+    .pop-menu(:class="{ hide: hide }")
+      p.pop-menu-x(v-on:click="hide = !hide")
+        | X
+      nav
+        ul
+          li.link
+            | Home
+          li.link
+            | About
+          li.link
+            | in the Hill
 </template>
 
 <script>
-import PopOutMenu from "./PopOutMenu"
-
 export default {
   name: "Header",
-  components: {
-    PopOutMenu
+  data: function () {
+    return {
+      hide: true
+    }
   }
 };
 </script>
@@ -81,6 +91,43 @@ export default {
   border: 1px solid #59E0FF;
   width: 25px;
   margin: 5px;
+}
+
+.pop-menu {
+  position: fixed;
+  right: 0;
+  width: 75%;
+  top: 0;
+  height: 100%;
+  background-color: #000;
+  color: #59E0FF;
+  opacity: 0.93;
+  z-index: 3;
+  transition: 0.4s ease-in-out;
+
+  .pop-menu-x {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    margin-top: 32px;
+    margin-right: 4px;
+    cursor: pointer;
+    color: #59E0FF;
+  }
+
+  nav {
+    margin-top: 6.5rem;
+
+    li {
+      list-style: none;
+      font-size: 1.5rem;
+      padding: 1.5rem 0;
+    }
+  }
+}
+
+.hide {
+  margin-right: -100%;
 }
 
 @media (max-width: 500px) {
