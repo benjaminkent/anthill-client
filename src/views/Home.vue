@@ -1,7 +1,6 @@
-<template>
-  <div class="home">
-    <Header/>
-  </div>
+<template lang="pug">
+  .home
+    Header
 </template>
 
 <script>

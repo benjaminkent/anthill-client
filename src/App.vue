@@ -1,9 +1,6 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <Home/>
-    </div>
-  </div>
+<template lang="pug">
+  #app
+    Home
 </template>
 
 <script>

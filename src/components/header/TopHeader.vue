@@ -1,27 +1,21 @@
-<template>
-  <div class="header">
-    <header class="header">
-      <img class="logo" src="../../assets/ant-logo.svg" alt="logo">
-      <nav class="big-nav">
-        <ul class="nav-list">
-          <li class="big-header">
-            <a href="#">Home</a>
-          </li>
-          <li class="big-header">
-            <a href="#">About</a>
-          </li>
-          <li class="big-header">
-            <a href="#">in the Hill</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="hamburger">
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-        <div class="hamburger-line"></div>
-      </div>
-    </header>
-  </div>
+<template lang="pug">
+  header.header
+    img.logo(src="../../assets/ant-logo.svg" alt="logo")
+    nav.big-nav
+      ul.nav-list
+        li.big-header
+          a(href="#")
+            | Home
+        li.big-header
+          a(href="#")
+            | About
+        li.big-header
+          a(href="#")
+            | in the Hill
+    .hamburger
+      .hamburger-line
+      .hamburger-line
+      .hamburger-line
 </template>
 
 <script>
@@ -31,8 +25,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
-
 .logo {
   height: 2.5rem;
   margin: 2rem 0 1.5rem 1rem;
@@ -45,7 +37,6 @@ export default {
   color: white;
   box-shadow: 0px 0.5px 5px black;
   z-index: 2;
-  font-family: "Major Mono Display", monospace;
   display: flex;
   justify-content: space-between;
 }
@@ -74,7 +65,7 @@ export default {
 }
 
 .hamburger-line {
-  border: 1px solid #fff;
+  border: 1px solid #59E0FF;
   width: 25px;
   margin: 5px;
 }
