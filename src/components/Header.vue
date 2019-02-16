@@ -11,11 +11,15 @@
             <a href="#">About</a>
           </li>
           <li class="big-header">
-            <a href="#">Meet the squad</a>
+            <a href="#">in the Hill</a>
           </li>
-          <li class="hamburger"></li>
         </ul>
       </nav>
+      <div class="hamburger">
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+        <div class="hamburger-line"></div>
+      </div>
     </header>
   </div>
 </template>
@@ -28,6 +32,11 @@ export default {
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+
+.logo {
+  height: 2.5rem;
+  margin: 2rem 0 1.5rem 1rem;
+}
 
 .header {
   position: fixed;
@@ -56,16 +65,28 @@ export default {
 }
 
 .big-header {
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 
-.logo {
-  height: 2.5rem;
-  margin: 2rem 0 1.5rem 0.5rem;
+.hamburger {
+  margin: 35px 20px 35px 0;
+  cursor: pointer;
 }
 
-@media (max-width: 501px) {
+.hamburger-line {
+  border: 1px solid #fff;
+  width: 25px;
+  margin: 5px;
+}
+
+@media (max-width: 500px) {
   .big-header {
+    display: none;
+  }
+}
+
+@media(min-width: 501px) {
+  .hamburger {
     display: none;
   }
 }
