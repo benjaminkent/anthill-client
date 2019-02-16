@@ -1,20 +1,39 @@
 <template lang="pug">
-  .pop-menu
-    p.pop-menu-x
-      | X
-    nav
-      ul
-        li.link
-          | Home
-        li.link
-          | About
-        li.link
-          | in the Hill
+  //- .pop-menu.hide
+  //-   p.pop-menu-x
+  //-     | X
+  //-   nav
+  //-     ul
+  //-       li.link
+  //-         | Home
+  //-       li.link
+  //-         | About
+  //-       li.link
+  //-         | in the Hill
 </template>
+
+<template>
+  <div class="pop-menu">
+    <p class="pop-menu-x">X</p>
+    <nav>
+      <ul>
+        <li class="link">Home</li>
+        <li class="link">About</li>
+        <li class="link">in the Hill</li>
+      </ul>
+    </nav>
+  </div>
+</template>
+
 
 <script>
 export default {
-  name: "PopOutMenu"
+  name: "PopOutMenu",
+  data: function () {
+    return {
+      hide
+    }
+  }
 }
 </script>
 
@@ -50,6 +69,10 @@ export default {
       padding: 1.5rem 0;
     }
   }
+}
+
+.hide {
+  margin-right: -100%;
 }
 </style>
 

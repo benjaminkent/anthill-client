@@ -1,30 +1,43 @@
 <template lang="pug">
-  header.header
-    img.logo(src="../../assets/ant-logo.svg" alt="logo")
-    nav.big-nav
-      ul.nav-list
-        li.big-header
-          a(href="#")
-            | Home
-        li.big-header
-          a(href="#")
-            | About
-        li.big-header
-          a(href="#")
-            | in the Hill
-    .hamburger
-      .hamburger-line
-      .hamburger-line
-      .hamburger-line
+  .header-container
+    header.header
+      img.logo(src="@/assets/ant-logo.svg" alt="logo")
+      nav.big-nav
+        ul.nav-list
+          li.big-header
+            a(href="#")
+              | Home
+          li.big-header
+            a(href="#")
+              | About
+          li.big-header
+            a(href="#")
+              | in the Hill
+      .hamburger
+        .hamburger-line
+        .hamburger-line
+        .hamburger-line
+    PopOutMenu
 </template>
 
 <script>
+import PopOutMenu from "./PopOutMenu"
+
 export default {
-  name: "Header"
+  name: "Header",
+  components: {
+    PopOutMenu
+  }
 };
 </script>
 
 <style scoped lang="scss">
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display");
+
+.header-container {
+  font-family: "Major Mono Display", monospace;
+}
+
 .logo {
   height: 2.5rem;
   margin: 2rem 0 1.5rem 1rem;
