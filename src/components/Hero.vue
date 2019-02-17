@@ -1,8 +1,10 @@
 <template lang="pug">
   .hero-container
     .hero-text
-      h1
-        | ANTHILL
+      h2.hero-welcome
+        | welcome to the
+      h1.hill
+        | Anthill
     .hero-image
 </template>
 
@@ -23,7 +25,7 @@ export default {
 .hero-image {
   padding-top: 100px;
   background: url("../assets/ant-hero.jpeg");
-  height: 330px;
+  height: 290px;
   background-position: center center;
   background-size: cover;
   width: 100vw;
@@ -31,10 +33,14 @@ export default {
 }
 
 .hero-text {
-  padding-top: 175px;
+  padding-top: 150px;
   margin: 0;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 h1 {
   font-family: "Major Mono Display", monospace;
@@ -43,6 +49,7 @@ h1 {
   left: 100px;
   color: #07efb5;
   z-index: 1000;
+  margin: 0;
 }
 </style>
 

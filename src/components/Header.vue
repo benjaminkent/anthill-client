@@ -54,7 +54,7 @@ export default {
 
 .logo {
   height: 2.5rem;
-  margin: 2rem 0 1.5rem 1rem;
+  margin: 22px 0 0 1rem;
 }
 
 .logo-right {
@@ -92,12 +92,12 @@ export default {
 }
 
 .hamburger {
-  margin: 35px 20px 35px 0;
+  margin: 27px 20px 27px 0;
   cursor: pointer;
 }
 
 .hamburger-line {
-  border: 1px solid #59E0FF;
+  border: 1.5px solid #59E0FF;
   width: 25px;
   margin: 5px;
 }
@@ -110,7 +110,7 @@ export default {
 
 .pop-logo {
   height: 2.5rem;
-  margin: 2rem 0 1.5rem 3px;
+  margin: 22px 0 0 5px;
 }
 
 .pop-menu {
@@ -122,14 +122,14 @@ export default {
   color: #59E0FF;
   opacity: 0.93;
   z-index: 3;
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   display: flex;
 
   .pop-menu-x {
     position: absolute;
-    right: 1.5rem;
+    right: 23.5px;
     font-size: 1.8rem;
-    margin-top: 32px;
+    margin-top: 26px;
     margin-right: 4px;
     cursor: pointer;
     color: #59E0FF;
