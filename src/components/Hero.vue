@@ -2,7 +2,7 @@
   .hero-container
     .hero-text
       h2.hero-welcome
-        | welcome, to the
+        | welcome to the
       h1.hill
         | ANTHILL
     .hero-image

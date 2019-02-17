@@ -2,20 +2,20 @@
   .home
     Header
     Hero
-    RecentEvents
+    UpcomingList
 </template>
 
 <script>
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import RecentEvents from "@/components/RecentEvents"
+import UpcomingList from "@/components/upcoming-events/UpcomingList"
 
 export default {
   name: "Home",
   components: {
     Header,
     Hero,
-    RecentEvents
+    UpcomingList
   }
 };
 </script>
