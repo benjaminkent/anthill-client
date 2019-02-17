@@ -2,9 +2,9 @@
   .hero-container
     .hero-text
       h2.hero-welcome
-        | welcome to the
+        | welcome, to the
       h1.hill
-        | Anthill
+        | ANTHILL
     .hero-image
 </template>
 
@@ -33,7 +33,7 @@ export default {
 }
 
 .hero-text {
-  padding-top: 150px;
+  padding-top: 95px;
   margin: 0;
   position: absolute;
   display: flex;
@@ -41,6 +41,12 @@ export default {
   align-items: center;
 }
 
+h2 {
+  font-family: "Major Mono Display", monospace;
+  font-size: 1.5rem;
+  color: #07efb5;
+  margin-bottom: 140px;
+}
 
 h1 {
   font-family: "Major Mono Display", monospace;
@@ -48,7 +54,6 @@ h1 {
   text-align: center;
   left: 100px;
   color: #07efb5;
-  z-index: 1000;
   margin: 0;
 }
 </style>
