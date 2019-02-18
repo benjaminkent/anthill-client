@@ -3,18 +3,28 @@
     h3
       | upcoming events
     .upcoming-list
-    UpcomingEvent
+    UpcomingEvent(
+      v-for="events in events"
+      :events="events"
+    )
 </template>
 
 
 
 <script>
+import axios from 'axios'
+import events from "./upcoming-list.json"
 import UpcomingEvent from "./UpcomingEvent"
 
 export default {
   name: "UpcomingList",
   components: {
     UpcomingEvent
+  },
+  data () {
+    return {
+      events
+    }
   }
 }
 </script>
