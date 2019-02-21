@@ -100,7 +100,6 @@ export default {
   border: 1.5px solid #59E0FF;
   width: 25px;
   margin: 5px;
-  border-radius: 100%;
 }
 
 .pop-header {

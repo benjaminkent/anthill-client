@@ -25,6 +25,11 @@ export default {
     return {
       events
     }
+  },
+  mounted () {
+    axios
+      .get('localhost:3030/events.json')
+      .then(response => (this.events = response))
   }
 }
 </script>
