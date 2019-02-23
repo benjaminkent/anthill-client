@@ -12,8 +12,7 @@
 
 
 <script>
-import axios from 'axios'
-import events from "./upcoming-list.json"
+// import axios from 'axios'
 import UpcomingEvent from "./UpcomingEvent"
 
 export default {
@@ -27,9 +26,15 @@ export default {
     }
   },
   mounted () {
-    axios
-      .get('localhost:3030/events.json')
-      .then(response => (this.events = response))
+    fetch('http://localhost:3000/api/events')
+      .then(r => r.json())
+      .then((data) => {
+        this.events = data
+      })
+  // axios not working for some reason...??? ?
+  //   axios
+  //     .get('localhost:3000/api/events')
+  //     .then(response => (console.log(response.data)))
   }
 }
 </script>
