@@ -1,25 +1,25 @@
 <template lang="pug">
   .event-item-container
     h1.event-title
-      | {{ events.name }}
+      | {{ event.name }}
     .event-details
       img.event-image(src="@/assets/tacos.jpeg")
       ul
         li
-          | Description: {{ events.description }}
+          | Description: {{ event.description }}
         li
-          | Venue: {{ events.venue }}
+          | Venue: {{ event.venue }}
         li
-          | City: {{ events.city }}
+          | City: {{ event.city }}
         li
-          | Date: {{ events.date }}
+          | Date: {{ event.date }}
 </template>
 
 <script>
 export default {
   name: "UpcomingEvent",
   props: {
-    events: Object
+    event: Object
   }
 }
 </script>

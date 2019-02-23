@@ -4,8 +4,8 @@
       | upcoming events
     .upcoming-list
     UpcomingEvent(
-      v-for="events in events"
-      :events="events"
+      v-for="event in events"
+      :event="event"
     )
 </template>
 
